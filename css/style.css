@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    color: white;
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    align-content: center;
+    
+}
+
+.header{
+    background-color: red;
+    
+}
+
+.main{
+    background-color: lightskyblue;
+    font-size: large;
+
+}
+
+.left{
+    background-color: limegreen;
+    
+
+}
+
+.right{
+    background-color: pink;
+
+}
+
+.footer{
+    background-color: rebeccapurple;
+}
+
+
+
+
+
+
+
+@media screen  and (max-width: 768px){
+    body {
+        display: flex;
+        flex-flow: column;
+        width: 400px;
+        height: 800px;
+        
+    }
+    .header,
+    .footer{
+        height: 100px;
+        width: 400px;
+    }
+    .main,
+    .left, 
+    .right{
+        height: 200px;
+        width: 400px;
+    }
+    
+}
+
+
+@media  screen and (min-width:768px) and (max-width: 992px) {
+    body {
+        display: flex;
+        flex-flow: row wrap;
+        width: 800px;
+        height: 1000px;
+        
+    }
+    .header,
+    .footer{
+        height: 100px;
+        width: 800px;
+    }
+    .left{
+        height: 300px;
+        width: 800px;
+    }
+    .main{
+        height: 400px;
+        width: 500px;
+    }
+    .right{
+        height: 400px;
+        width: 300px;
+    }
+
+    body>.main{
+        order: 1;
+    }
+    body>.right{
+        order: 2;
+    }
+    body>.left{
+        order: 3;
+    }
+    body>.footer{
+        order: 4;
+    }
+
+}   
+
+@media screen  and (min-width: 992px){
+    body {
+        display: flex;
+        flex-flow: row wrap;
+        width: 1200px;
+        height: 800px;
+        
+    }
+    .header,
+    .footer{
+        height: 100px;
+        width: 1200px;
+    }
+    .left{
+        height: 500px;
+        width: 300px;
+    }
+    .right{
+        height: 500px;
+        width: 300px;
+    }
+    .main{
+        height: 500px;
+        width: 600px;
+    }
+
+    body>.left {
+        order: 1;
+
+    }
+    body>.main{
+        order: 2;
+    }
+    body>.right{
+        order: 3;
+    }
+    body>.footer{
+        order: 4; 
+    }
+}
